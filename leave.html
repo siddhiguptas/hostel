@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Application | Cauvery Bhavan</title>
+  <link rel="icon" type="image/jpeg" href="assets/hostel-photo.jpg">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CB</span>
+        <span>
+          <strong>Cauvery Bhavan</strong>
+          <small>Hostel Management</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="fees.html">Fees</a></li>
+        <li><a href="leave.html" class="active">Leave</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a class="login-link" href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero leave-hero">
+      <div>
+        <p class="eyebrow">Leave request</p>
+        <h1>Apply for hostel leave without paperwork.</h1>
+        <p>Submit travel dates, reason, guardian contact, and room details for quick review by the warden office.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap form-layout">
+      <div class="form-copy">
+        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80" alt="Student filling an application form">
+        <div class="notice-box">
+          <h2>Before submitting</h2>
+          <p>Use correct travel dates and keep your guardian phone number active. Approved leave details should match the hostel gate register.</p>
+        </div>
+      </div>
+
+      <div class="form-panel">
+        <p class="eyebrow">Application form</p>
+        <h2>Leave details</h2>
+        <form id="leaveForm">
+          <div class="input-row">
+            <label for="studentName">Student name</label>
+            <input type="text" id="studentName" placeholder="Enter full name" required>
+          </div>
+
+          <div class="input-row two-col">
+            <div>
+              <label for="room">Room no.</label>
+              <input type="text" id="room" placeholder="A-204" required>
+            </div>
+            <div>
+              <label for="rollNo">Roll no.</label>
+              <input type="text" id="rollNo" placeholder="College ID" required>
+            </div>
+          </div>
+
+          <div class="input-row two-col">
+            <div>
+              <label for="fromDate">From</label>
+              <input type="date" id="fromDate" required>
+            </div>
+            <div>
+              <label for="toDate">To</label>
+              <input type="date" id="toDate" required>
+            </div>
+          </div>
+
+          <div class="input-row">
+            <label for="guardianPhone">Guardian phone</label>
+            <input type="tel" id="guardianPhone" placeholder="10 digit mobile number" pattern="[0-9]{10}" required>
+          </div>
+
+          <div class="input-row">
+            <label for="reason">Reason</label>
+            <textarea id="reason" placeholder="Mention travel purpose and destination" required></textarea>
+          </div>
+
+          <button class="btn primary" type="submit">Submit leave request</button>
+        </form>
+        <p class="form-message" id="leaveMessage" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Copyright 2026 Cauvery Bhavan. Student housing made simple.</p>
+  </footer>
+</body>
+</html>

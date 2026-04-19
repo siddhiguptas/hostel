@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Cauvery Bhavan</title>
+  <link rel="icon" type="image/jpeg" href="assets/hostel-photo.jpg">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="login-page">
+  <main class="auth-layout">
+    <section class="auth-visual">
+      <a class="brand auth-brand" href="index.html">
+        <span class="brand-mark">CB</span>
+        <span>
+          <strong>Cauvery Bhavan</strong>
+          <small>Hostel Management</small>
+        </span>
+      </a>
+      <div class="auth-copy">
+        <p class="eyebrow">Secure access</p>
+        <h1>Manage hostel work with a clearer daily dashboard.</h1>
+        <p>Use student, warden, or admin access to keep rooms, fees, leave, and facilities organized.</p>
+      </div>
+    </section>
+
+    <section class="auth-panel" aria-label="Account access">
+      <a class="back-link" href="index.html">Back to home</a>
+      <p class="eyebrow">Welcome back</p>
+      <h2 id="authTitle">Login to continue</h2>
+
+      <div class="auth-tabs" role="tablist" aria-label="Choose account action">
+        <button class="auth-tab active" type="button" data-auth-tab="login" aria-selected="true">Login</button>
+        <button class="auth-tab" type="button" data-auth-tab="signup" aria-selected="false">Sign up</button>
+      </div>
+
+      <form id="loginForm">
+        <div class="input-row">
+          <label for="loginRole">Role</label>
+          <select id="loginRole" required>
+            <option value="Student">Student</option>
+            <option value="Warden">Warden</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </div>
+
+        <div class="input-row">
+          <label for="loginUsername">Username</label>
+          <input type="text" id="loginUsername" placeholder="Enter username" autocomplete="username" required>
+        </div>
+
+        <div class="input-row">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" placeholder="Enter password" autocomplete="current-password" minlength="4" required>
+        </div>
+
+        <button class="btn primary" type="submit">Login</button>
+      </form>
+
+      <form id="signupForm" hidden>
+        <div class="input-row">
+          <label for="signupRole">Role</label>
+          <select id="signupRole" required>
+            <option value="Student">Student</option>
+            <option value="Warden">Warden</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </div>
+
+        <div class="input-row">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" placeholder="Enter full name" autocomplete="name" required>
+        </div>
+
+        <div class="input-row">
+          <label for="signupUsername">Username</label>
+          <input type="text" id="signupUsername" placeholder="Choose username" autocomplete="username" required>
+        </div>
+
+        <div class="input-row two-col">
+          <div>
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" placeholder="Minimum 4 characters" autocomplete="new-password" minlength="4" required>
+          </div>
+          <div>
+            <label for="confirmPassword">Confirm</label>
+            <input type="password" id="confirmPassword" placeholder="Repeat password" autocomplete="new-password" minlength="4" required>
+          </div>
+        </div>
+
+        <button class="btn primary" type="submit">Create account</button>
+      </form>
+      <p class="form-message" id="loginMessage" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>

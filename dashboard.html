@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Cauvery Bhavan</title>
+  <link rel="icon" type="image/jpeg" href="assets/hostel-photo.jpg">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CB</span>
+        <span>
+          <strong>Cauvery Bhavan</strong>
+          <small>Hostel Management</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="fees.html">Fees</a></li>
+        <li><a href="leave.html">Leave</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a class="login-link active" href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero dashboard-hero">
+      <div>
+        <p class="eyebrow">Dashboard</p>
+        <h1 id="dashboardGreeting">Welcome to Cauvery Bhavan.</h1>
+        <p id="dashboardRole">Your hostel workspace is ready.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap dashboard-layout">
+      <aside class="profile-panel">
+        <span class="profile-avatar" id="profileInitials">CB</span>
+        <p class="eyebrow">Signed in as</p>
+        <h2 id="profileName">Resident</h2>
+        <p id="profileMeta">Student account</p>
+        <button class="btn primary" type="button" id="logoutBtn">Logout</button>
+      </aside>
+
+      <div class="dashboard-content">
+        <div class="dashboard-grid">
+          <article class="dashboard-card">
+            <span>Room</span>
+            <strong>A-204</strong>
+            <p>Current room allotment</p>
+          </article>
+          <article class="dashboard-card">
+            <span>Fees</span>
+            <strong>Rs. 0</strong>
+            <p>Pending balance sample</p>
+          </article>
+          <article class="dashboard-card">
+            <span>Leave</span>
+            <strong>Ready</strong>
+            <p>Submit a fresh request</p>
+          </article>
+        </div>
+
+        <div class="dashboard-actions">
+          <a class="module-card" href="leave.html">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80" alt="Student filling an application form">
+            <div>
+              <span>Leave</span>
+              <h3>Apply for leave</h3>
+              <p>Send dates and guardian contact to the warden office.</p>
+            </div>
+          </a>
+          <a class="module-card" href="fees.html">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80" alt="Desk with calculator and fee records">
+            <div>
+              <span>Fees</span>
+              <h3>Check fee estimate</h3>
+              <p>Calculate room charges and remaining balance.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Copyright 2026 Cauvery Bhavan. Student housing made simple.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fees | Cauvery Bhavan</title>
+  <link rel="icon" type="image/jpeg" href="assets/hostel-photo.jpg">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary navigation">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">CB</span>
+        <span>
+          <strong>Cauvery Bhavan</strong>
+          <small>Hostel Management</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="facilities.html">Facilities</a></li>
+        <li><a href="fees.html" class="active">Fees</a></li>
+        <li><a href="leave.html">Leave</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a class="login-link" href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero fees-hero">
+      <div>
+        <p class="eyebrow">Fees</p>
+        <h1>Simple room charges with quick due estimates.</h1>
+        <p>Students can compare room categories and estimate the remaining amount after payment.</p>
+      </div>
+    </section>
+
+    <section class="section-wrap fee-layout">
+      <div class="table-panel">
+        <div class="section-heading compact">
+          <p class="eyebrow">Room charges</p>
+          <h2>Hostel fee structure</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Room Type</th>
+                <th>Monthly Fee</th>
+                <th>Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Single Room</td>
+                <td>Rs. 10,000</td>
+                <td>Privacy and focused study</td>
+              </tr>
+              <tr>
+                <td>Double Room</td>
+                <td>Rs. 8,000</td>
+                <td>Shared living with comfort</td>
+              </tr>
+              <tr>
+                <td>Triple Room</td>
+                <td>Rs. 5,000</td>
+                <td>Affordable student housing</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <aside class="fee-calculator">
+        <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=900&q=80" alt="Notebook and calculator for fee planning">
+        <div class="calculator-body">
+          <p class="eyebrow">Fee estimator</p>
+          <h2>Check your balance</h2>
+          <form id="feeForm">
+            <label for="roomType">Room type</label>
+            <select id="roomType" required>
+              <option value="10000">Single Room</option>
+              <option value="8000">Double Room</option>
+              <option value="5000">Triple Room</option>
+            </select>
+
+            <label for="months">Months</label>
+            <input id="months" type="number" min="1" max="12" value="1" required>
+
+            <label for="paidAmount">Amount paid</label>
+            <input id="paidAmount" type="number" min="0" value="0" required>
+
+            <button class="btn primary" type="submit">Calculate due</button>
+          </form>
+          <p class="form-message" id="feeResult" aria-live="polite">Choose a room and calculate the balance.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Copyright 2026 Cauvery Bhavan. Student housing made simple.</p>
+  </footer>
+</body>
+</html>
